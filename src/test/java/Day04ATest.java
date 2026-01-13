@@ -18,13 +18,13 @@ public class Day04ATest {
     }
 
     @Test
-    public void should_find_available_rolls_of_paper() {
+    public void should_find_available_rolls_of_paper_for_example_input() {
         Grid grid = new PaperLoader("/Day04BasicTest.txt").loadAll();
         assertThat(new AccessChecker(grid, new FourConnectedAccessRule()).countAvailablePaperRolls()).isEqualTo(13);
     }
 
     @Test
-    public void should_find_all_available_rolls_of_paper() {
+    public void should_find_available_rolls_of_paper_for_puzzle_input() {
         Grid grid = new PaperLoader("/Day04PaperRolls.txt").loadAll();
         assertThat(new AccessChecker(grid, new FourConnectedAccessRule()).countAvailablePaperRolls()).isEqualTo(1376);
     }

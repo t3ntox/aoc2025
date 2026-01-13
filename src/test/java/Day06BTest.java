@@ -7,13 +7,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class Day06BTest {
     @Test
-    public void should_solve_correctly() {
+    public void should_parse_and_solve_correctly_for_example_input() {
         assertThat(new Operator(new OperationLoader("/Day06BasicTest.txt", new ReverseOperationParser()).loadAll()).solve())
                 .isEqualTo(3263827L);
     }
 
     @Test
-    public void should_pass_final_test() {
+    public void should_parse_and_solve_correctly_for_puzzle_input() {
         assertThat(new Operator(new OperationLoader("/Day06Operations.txt", new ReverseOperationParser()).loadAll()).solve())
                 .isEqualTo(9695042567249L);
     }

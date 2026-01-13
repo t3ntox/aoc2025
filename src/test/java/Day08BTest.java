@@ -10,14 +10,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class Day08BTest {
     @Test
-    public void should_solve_correctly() {
+    public void should_connect_all_circuits_correctly_for_example_input() {
         List<Circuit> circuits = new CircuitLoader("/Day08BasicTest.txt").loadAll().toList();
         assertThat(new CircuitConnector(new BoxConnector(circuits.stream()).connectAll(), circuits).toCableExtension())
                 .isEqualTo(25272L);
     }
 
     @Test
-    public void should_solve_final_test() {
+    public void should_connect_all_circuits_correctly_for_puzzle_input() {
         List<Circuit> circuits = new CircuitLoader("/Day08Boxes.txt").loadAll().toList();
         assertThat(new CircuitConnector(new BoxConnector(circuits.stream())
                 .connectAll(), circuits)

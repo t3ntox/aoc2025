@@ -18,8 +18,16 @@ public class Day03ATest {
     }
 
     @Test
-    public void should_find_and_add_best_pairs() {
+    public void should_find_and_add_best_pairs_for_example_input() {
         Long addedPairs = new BankLoader("/Day03BasicTest.txt").loadAll()
+                .map(b -> b.getPair(2))
+                .mapToLong(Long::longValue).sum();
+        assertThat(addedPairs).isEqualTo(357);
+    }
+
+    @Test
+    public void should_find_and_add_best_pairs_for_puzzle_input() {
+        Long addedPairs = new BankLoader("/Day03Banks.txt").loadAll()
                 .map(b -> b.getPair(2))
                 .mapToLong(Long::longValue).sum();
         assertThat(addedPairs).isEqualTo(357);

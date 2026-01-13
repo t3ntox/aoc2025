@@ -6,13 +6,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class Day03BTest {
     @Test
-    public void should_find_best_pair() {
+    public void should_find_best_dozens() {
         Bank bank = new Bank("234234234234278");
         assertThat(bank.getPair(12)).isEqualTo(434234234278L);
     }
 
     @Test
-    public void should_find_and_add_best_dozens() {
+    public void should_find_and_add_best_dozens_for_example_input() {
         Long addedPairs = new BankLoader("/Day03BasicTest.txt").loadAll()
                 .map(b -> b.getPair(12))
                 .mapToLong(Long::longValue).sum();
@@ -20,7 +20,7 @@ public class Day03BTest {
     }
 
     @Test
-    public void should_find_and_add_all_best_dozens() {
+    public void should_find_and_add_best_dozens_for_puzzle_input() {
         Long addedPairs = new BankLoader("/Day03Banks.txt").loadAll()
                 .map(b -> b.getPair(12))
                 .mapToLong(Long::longValue).sum();

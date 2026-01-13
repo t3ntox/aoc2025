@@ -6,7 +6,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class Day10BTest {
     @Test
-    public void should_solve_correctly() {
+    public void should_affect_joltages_correctly_for_example_input() {
         assertThat(new MachineLoader("/Day10BasicTest.txt").loadAll()
                 .map( m -> new JoltageTester(m).solve())
                 .mapToLong(Long::longValue)
@@ -15,7 +15,7 @@ public class Day10BTest {
     }
 
     @Test
-    public void should_solve_final_test() {
+    public void should_affect_joltages_correctly_for_puzzle_input() {
         assertThat(new MachineLoader("/Day10Lights.txt").loadAll()
                 .map( m -> new JoltageTester(m).solve())
                 .mapToLong(Long::longValue)

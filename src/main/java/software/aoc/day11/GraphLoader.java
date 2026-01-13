@@ -9,10 +9,10 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 
-public class TagLoader implements Loader{
+public class GraphLoader implements Loader{
     private String tags;
 
-    public TagLoader(String tags) {
+    public GraphLoader(String tags) {
         this.tags = tags;
     }
 

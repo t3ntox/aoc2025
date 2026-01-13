@@ -22,7 +22,7 @@ public class Day01ATest {
     }
 
     @Test
-    public void move_correctly_in_edges() {
+    public void should_move_correctly_in_edges() {
         Dial dial95 = new Dial(5, new SimpleZeroCounter(),0)
                 .rotate(new Order("L10"));
         assertThat(dial95.pointedValue()).isEqualTo(95);
@@ -30,7 +30,7 @@ public class Day01ATest {
     }
 
     @Test
-    public void count_zeros_correctly() {
+    public void should_count_result_zero_correctly_for_example_input() {
         Dial dial0 = new OrdersLoader("/Day01CountZeroTest.txt").loadAll().reduce(
                 new Dial(50, new SimpleZeroCounter(),0),
                 Dial::rotate,
@@ -40,7 +40,7 @@ public class Day01ATest {
     }
 
     @Test
-    public void final_test() {
+    public void should_count_result_zero_correctly_for_puzzle_input() {
         Dial finalDial = new OrdersLoader("/Day01Orders.txt").loadAll().reduce(
                 new Dial(50, new SimpleZeroCounter(),0),
                 Dial::rotate,

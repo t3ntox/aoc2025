@@ -66,13 +66,13 @@ day11/
 ├─ Loader
 ├─ PathCounter
 ├─ PathState
-└─ TagLoader
+└─ GraphLoader
 ```
 
 - **Graph**: clase inmutable que encapsula un grafo dirigido como mapa de adyacencia, proporcionando acceso a los nodos vecinos de cada nodo.
 - **PathState**: clase inmutable que representa el estado de un camino durante el recorrido, incluyendo el nodo actual y flags de visitación (`dacVisited`, `fftVisited`), con métodos factory para diferentes condiciones iniciales.
 - **PathCounter**: clase que cuenta todos los caminos válidos desde un nodo origen, utilizando recursión con memoización, soportando dos estrategias: permitir todos los nodos o requerir visita de `dac` y `fft`.
-- **TagLoader**: clase responsable de cargar el grafo desde el fichero de texto de entrada, parseando líneas en pares nodo-vecinos y construyendo la estructura de adyacencia.
+- **GraphLoader**: clase responsable de cargar el grafo desde el fichero de texto de entrada, parseando líneas en pares nodo-vecinos y construyendo la estructura de adyacencia.
 - **Loader**: interfaz que define el contrato para la carga de grafos, permitiendo desacoplar el origen de los datos.
 
 ## 📐 Fundamentos, Principios y patrones de diseño de ingeniería del software aplicados
@@ -97,11 +97,11 @@ day11/
   - `Graph`: representa la estructura del grafo y sus relaciones.
   - `PathCounter`: contiene la lógica de conteo de caminos.
   - `PathState`: encapsula el estado lógico de un recorrido (nodo y tags visitados).
-  - `TagLoader`: se encarga exclusivamente del parsing del input y construcción del grafo.
+  - `GraphLoader`: se encarga exclusivamente del parsing del input y construcción del grafo.
 - **Open / Closed Principle (OCP)**:
-  - Nuevas variantes de conteo o reglas de validación pueden añadirse extendiendo `PathCounter` (nuevos métodos) o evolucionando `PathState` sin modificar `Graph` ni `TagLoader`.
+  - Nuevas variantes de conteo o reglas de validación pueden añadirse extendiendo `PathCounter` (nuevos métodos) o evolucionando `PathState` sin modificar `Graph` ni `GraphLoader`.
 - **Bajo acoplamiento**:
-  - `PathCounter` depende de `Graph` y no del origen de datos, que queda aislado en `Loader`/`TagLoader`.
+  - `PathCounter` depende de `Graph` y no del origen de datos, que queda aislado en `Loader`/`GraphLoader`.
 - **Alta cohesión**:
   - Cada clase agrupa responsabilidades estrechamente relacionadas: estructura, estado, conteo o carga de datos.
 

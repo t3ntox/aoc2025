@@ -18,7 +18,7 @@ public class Day02ATest {
     }
 
     @Test
-    public void should_check_invalid_ids() {
+    public void should_check_invalid_ids_for_example_input() {
         long invalidIDs = new RangeLoader("/Day02BasicTest.txt").loadAll()
                 .mapToLong(r -> new RangeChecker(r, new ArrayList<>()).check(Main::isMadeByRepetition).addInvalidIDs())
                 .sum();
@@ -26,7 +26,7 @@ public class Day02ATest {
     }
 
     @Test
-    public void should_add_correctly_all_invalid_ids() {
+    public void should_check_invalid_ids_for_puzzle_input() {
         long invalidIDs = new RangeLoader("/Day02Ranges.txt").loadAll()
                 .mapToLong(r -> new RangeChecker(r, new ArrayList<>()).check(Main::isMadeByRepetition).addInvalidIDs())
                 .sum();

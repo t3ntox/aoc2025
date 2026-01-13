@@ -9,7 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class Day01BTest {
 
     @Test
-    public void count_zeros_correctly() {
+    public void should_count_zeros_correctly_for_example_input() {
         Dial dial0 = new OrdersLoader("/Day01CountZeroTest.txt").loadAll().reduce(
                 new Dial(50, new WrapZeroCounter(), 0),
                 Dial::rotate,
@@ -22,14 +22,14 @@ public class Day01BTest {
     }
 
     @Test
-    public void count_zeros_correctly_with_big_rotation() {
+    public void should_count_zeros_correctly_with_big_rotation() {
         Dial dial95 = new Dial(50, new WrapZeroCounter(),0)
                 .rotate(new Order("L1050"));
         assertThat(dial95.zeroTimes()).isEqualTo(11);
     }
 
     @Test
-    public void final_test() {
+    public void should_count_zeros_correctly_for_puzzle_input() {
         Dial finalDial = new OrdersLoader("/Day01Orders.txt").loadAll().reduce(
                 new Dial(50, new WrapZeroCounter(),0),
                 Dial::rotate,

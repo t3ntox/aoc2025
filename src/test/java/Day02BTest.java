@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class Day02BTest {
 
     @Test
-    public void should_check_invalid_ids() {
+    public void should_check_patterns_of_ids_for_example_input() {
         long invalidIDs = new RangeLoader("/Day02BasicTest.txt").loadAll()
                 .mapToLong(r -> new RangeChecker(r, new ArrayList<>()).check(Main::isMadeByPattern).addInvalidIDs())
                 .sum();
@@ -18,7 +18,7 @@ public class Day02BTest {
     }
 
     @Test
-    public void should_add_correctly_all_invalid_ids() {
+    public void should_check_patterns_of_ids_for_puzzle_input() {
         long invalidIDs = new RangeLoader("/Day02Ranges.txt").loadAll()
                 .mapToLong(r -> new RangeChecker(r, new ArrayList<>()).check(Main::isMadeByPattern).addInvalidIDs())
                 .sum();

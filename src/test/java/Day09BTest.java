@@ -9,15 +9,16 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class Day09BTest {
+
     @Test
-    public void should_solve_correctly() {
+    public void should_find_biggest_rectangle_in_polygon_for_example_input() {
         List<Point> list = new PointLoader("/Day09BasicTest.txt").loadAll().toList();
         assertThat(new AreaCalculator(new RectangleProvider(list), list).findLargestValidRectangleArea())
                 .isEqualTo(24L);
     }
 
     @Test
-    public void should_solve_final_test() {
+    public void should_find_biggest_rectangle_in_polygon_for_puzzle_input() {
         List<Point> list = new PointLoader("/Day09Points.txt").loadAll().toList();
         assertThat(new AreaCalculator(new RectangleProvider(list), list).findLargestValidRectangleArea())
                 .isEqualTo(1501292304L);
