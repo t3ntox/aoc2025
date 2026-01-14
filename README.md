@@ -57,7 +57,6 @@ aoc2025/
 
 ## 🧠 Objetivo y enfoque de diseño
 
----
 
 El objetivo principal del proyecto es resolver los ejercicios aplicando de forma consistente:
 
@@ -71,7 +70,6 @@ El foco no está en construir arquitecturas complejas, sino en **entender el pro
 
 ## 👩‍💻 Autoría
 
----
 Cada una de las soluciones ha sido desarrollado por **Vidal** como ejercicio de resolución y diseño de software para **Advent of Code 2025**.
 
 <img width="1092" height="827" alt="Estrellas AoC2025" src="https://github.com/user-attachments/assets/c14a01c3-69b3-49a9-b2a3-94a24fc242a3" />
