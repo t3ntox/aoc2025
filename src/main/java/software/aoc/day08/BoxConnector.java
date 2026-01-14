@@ -5,7 +5,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class BoxConnector {
-    private Stream<Circuit> junctionBoxes;
+    private final Stream<Circuit> junctionBoxes;
 
     public BoxConnector(Stream<Circuit> junctionBoxes) {
         this.junctionBoxes = junctionBoxes;

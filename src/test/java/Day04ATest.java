@@ -1,12 +1,9 @@
 import org.junit.Test;
-import software.aoc.day03.Bank;
-import software.aoc.day03.BankLoader;
 import software.aoc.day04.AccessChecker;
 import software.aoc.day04.FourConnectedAccessRule;
 import software.aoc.day04.Grid;
 import software.aoc.day04.PaperLoader;
 
-import java.util.ArrayList;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

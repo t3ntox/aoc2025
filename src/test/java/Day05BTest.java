@@ -1,12 +1,7 @@
 import org.junit.Test;
-import software.aoc.day05.IdRange;
 import software.aoc.day05.RangeLoader;
 import software.aoc.day05.RangeUnifier;
-import software.aoc.day05.a.IdLoader;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

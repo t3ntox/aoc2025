@@ -4,21 +4,19 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 
 public class GraphLoader implements Loader{
-    private String tags;
+    private final String connectedNodes;
 
-    public GraphLoader(String tags) {
-        this.tags = tags;
+    public GraphLoader(String connectedNodes) {
+        this.connectedNodes = connectedNodes;
     }
 
     @Override
     public Graph loadAll() {
-        return toGraph(getClass().getResourceAsStream(tags));
+        return toGraph(getClass().getResourceAsStream(connectedNodes));
     }
 
     private Graph toGraph(InputStream resourceAsStream) {

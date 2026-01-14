@@ -3,7 +3,6 @@ import software.aoc.day07.TachyonManifold;
 import software.aoc.day07.a.BFSBeamStrategy;
 import software.aoc.day07.TachyonLoader;
 
-import java.util.ArrayList;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

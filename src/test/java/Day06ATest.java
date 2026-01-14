@@ -4,8 +4,6 @@ import software.aoc.day06.OperationLoader;
 import software.aoc.day06.Operator;
 import software.aoc.day06.a.StandardOperationParser;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
